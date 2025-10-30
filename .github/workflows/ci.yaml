@@ -4,8 +4,8 @@ name: CI Pipeline
 on:
   push:
     branches: [main]  # Trigger on pushes to main branch
-  pull_request:
-    branches: [main]  # Trigger on PRs to main branch
+  # pull_request:
+  #   branches: [main]  # Trigger on PRs to main branch
 
 concurrency:
   group: ci-${{github.ref}}
