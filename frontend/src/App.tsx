@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import api from './api/client';
 
 interface User {
@@ -9,6 +9,7 @@ interface User {
 function App() {
   const [users, setUsers] = useState<User[]>([]);
   const [name, setName] = useState('');
+  const fetched = useRef(users)
 
   // Fetch all users on mount
   useEffect(() => {
@@ -20,7 +21,9 @@ function App() {
         console.error('Error fetching users:', err);
       }
     };
-    fetchUsers();
+    if (!fetched) {
+      fetchUsers();
+    }
   }, []);
 
   // Add a new user
