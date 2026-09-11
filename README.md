@@ -1,6 +1,6 @@
-# OpsByRazi — Application and CI Foundations
+# OpsByRazi
 
-OpsByRazi is a small user-management application built with React, Express, TypeScript, and PostgreSQL. It brings together an API, a browser interface, a Docker-based database environment, and GitHub Actions lint/build automation.
+OpsByRazi is a small user-management application built with React, Express, TypeScript, and PostgreSQL. The frontend and API run locally, PostgreSQL runs in Docker, and GitHub Actions checks linting and builds.
 
 ## Implemented features
 
